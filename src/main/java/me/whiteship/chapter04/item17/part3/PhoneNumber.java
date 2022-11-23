@@ -4,6 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 // equals를 재정의하면 hashCode로 재정의해야 함을 보여준다. (70-71쪽)
+
+/**
+ * 9. 모든 "외부에 공개하는" 필드가 final 이어야한다.
+ *      - 내부에서만 사용되는 필드의 경우엔 final 을 사용하지 않을 수 있다.
+ *        -> 계산 비용이 큰 값은 나중에 계산하여 final 이 아닌 필드에 캐싱해서 쓸 수 있다.
+ */
 public final class PhoneNumber {
     private final short areaCode, prefix, lineNum;
 
