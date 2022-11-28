@@ -33,6 +33,9 @@ public class InstrumentedHashSet<E> extends HashSet<E> {
     public static void main(String[] args) {
         InstrumentedHashSet<String> s = new InstrumentedHashSet<>();
         s.addAll(List.of("틱", "탁탁", "펑"));
+        /**
+         * 1. 3이 나와야하는데 6이 나옴 -> 상속한 클래스의 내부 구현을 알아야 정확히 오버라이딩할 수 있음(캡슐화가 깨짐)
+         */
         System.out.println(s.getAddCount());
     }
 }

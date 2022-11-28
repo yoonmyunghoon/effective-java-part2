@@ -11,7 +11,7 @@ public class BobFunctionWrapper implements FunctionToCall {
     @Override
     public void call() {
         this.bobFunction.call();
-        System.out.println("커피도 마실까...");
+        System.out.println("커피도 마실까..."); // 의도한 추가 기능
     }
 
     @Override
