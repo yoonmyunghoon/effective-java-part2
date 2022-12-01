@@ -8,6 +8,7 @@ public final class Sub extends Super {
     private final Instant instant;
 
     Sub() {
+//        super(); 안적어줘도 자동으로 호출됨
         instant = Instant.now();
     }
 

@@ -16,11 +16,13 @@ public class InstrumentedHashSet<E> extends HashSet<E> {
         super(initCap, loadFactor);
     }
 
+    // 없애면 제대로 나오지만, 매번 이렇게 상위 클래스 내부 구현에 의존할 수는 없다. -> 캡슐화가 깨지게 됨
     @Override public boolean add(E e) {
         addCount++;
         return super.add(e);
     }
 
+    // 아예 새롭게 재정의? -> 어렵고, 오류 및 성능 문제가 발생할 수 있다. 상위 클래스의 private 필드가 필요한 경우 구현 불가능
     @Override public boolean addAll(Collection<? extends E> c) {
         addCount += c.size();
         return super.addAll(c);
